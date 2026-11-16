@@ -1,0 +1,51 @@
+{
+  "corpus": [
+    {"id": "c-01", "category": "personal", "subcategory": "profile_fact", "content": "Alex holds a master's degree in Computer Science from IISc Bangalore.", "tags": ["education", "degree"]},
+    {"id": "c-02", "category": "personal", "subcategory": "profile_fact", "content": "Alex has 8 years of professional software development experience.", "tags": ["career", "experience"]},
+    {"id": "c-03", "category": "personal", "subcategory": "profile_fact", "content": "The development machine is a Windows 11 workstation with 8 GB RAM and no dedicated GPU.", "tags": ["hardware", "environment"]},
+    {"id": "c-04", "category": "personal", "subcategory": "preference", "content": "Prefers pytest over unittest for Python test suites.", "tags": ["testing", "python"]},
+    {"id": "c-05", "category": "personal", "subcategory": "preference", "content": "Prefers explicit dependency injection over global singleton state.", "tags": ["architecture", "clean-code"]},
+    {"id": "c-06", "category": "personal", "subcategory": "preference", "content": "Avoids using external cloud APIs when local offline models suffice.", "tags": ["privacy", "offline"]},
+    {"id": "c-07", "category": "personal", "subcategory": "goal", "content": "Master Rust systems programming by Q3 2026.", "tags": ["rust", "learning"]},
+    {"id": "c-08", "category": "personal", "subcategory": "goal", "content": "Publish E.D.I.T.H. Brain Core as an open source MIT library.", "tags": ["open-source", "release"]},
+    {"id": "c-09", "category": "personal", "subcategory": "skill", "content": "Expert level proficiency in Python, FastAPI, and asynchronous programming.", "tags": ["python", "async"]},
+    {"id": "c-10", "category": "personal", "subcategory": "skill", "content": "Intermediate competence in Docker containerization and CI/CD pipelines.", "tags": ["docker", "devops"]},
+    {"id": "c-11", "category": "personal", "subcategory": "skill", "content": "Proficient in relational database schema design, index optimization, and SQL transactions.", "tags": ["sql", "database"]},
+    {"id": "c-12", "category": "personal", "subcategory": "project_context", "content": "E.D.I.T.H. Brain Core is currently located in directory D:/edith-brain-core.", "tags": ["workspace", "paths"]},
+    {"id": "c-13", "category": "personal", "subcategory": "project_context", "content": "The storage engine uses SQLite WAL mode with busy_timeout set to 5000 milliseconds.", "tags": ["sqlite", "wal"]},
+    {"id": "c-14", "category": "personal", "subcategory": "decision", "content": "Rejected Chroma and Milvus vector databases to avoid heavy JVM and native dependencies.", "tags": ["decision", "vectordb"]},
+    {"id": "c-15", "category": "personal", "subcategory": "decision", "content": "Adopted Reciprocal Rank Fusion (RRF) with k=60 to merge BM25 and vector scores.", "tags": ["decision", "rrf", "retrieval"]}
+  ],
+  "eval_queries": [
+    {
+      "query": "Where did Alex complete his degree and in what field?",
+      "expected_ids": ["c-01"],
+      "query_type": "profile_fact"
+    },
+    {
+      "query": "How much RAM and what operating system is on the development machine?",
+      "expected_ids": ["c-03"],
+      "query_type": "hardware_specs"
+    },
+    {
+      "query": "Which Python testing framework is preferred?",
+      "expected_ids": ["c-04"],
+      "query_type": "preference"
+    },
+    {
+      "query": "What are his learning goals regarding Rust?",
+      "expected_ids": ["c-07"],
+      "query_type": "goal"
+    },
+    {
+      "query": "What vector databases were rejected and why?",
+      "expected_ids": ["c-14"],
+      "query_type": "decision"
+    },
+    {
+      "query": "Quantum cryptography post-quantum algorithms",
+      "expected_ids": [],
+      "query_type": "no_result_distractor"
+    }
+  ]
+}
